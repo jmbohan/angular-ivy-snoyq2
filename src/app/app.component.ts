@@ -17,5 +17,11 @@ export class AppComponent {
       error: (err) => console.error(`error occurred ${err}`),
       complete: () => console.log(`complete`),
     });
+
+    of('Apple1', 'Apple2', 'Apple3').subscribe({
+      next: (appple) => console.log(`Apple emitted.. ${appple}`),
+      error: (err) => console.error(`error occurrd ${err}`),
+      complete: () => console.log(`no more apples.. `),
+    });
   }
 }
